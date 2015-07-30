@@ -205,7 +205,7 @@ public:
 	{
 		mLastError = NULL;
 	}
-	~BitcoinScriptImpl(void)
+	virtual ~BitcoinScriptImpl(void)
 	{
 
 	}

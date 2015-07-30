@@ -7,7 +7,9 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+#ifdef _MSC_VER
 #pragma warning(disable:4996)
+#endif
 
 #if 0 // helper method to copy a section of the blockchain to a local file
 void copyFile(const char *rootDir)

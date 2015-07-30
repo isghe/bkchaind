@@ -16,7 +16,7 @@ public:
 		mBitcoinScript = createBitcoinScript();
 	}
 
-	~BitcoinTransactionsImpl(void)
+	virtual ~BitcoinTransactionsImpl(void)
 	{
 		if ( mBitcoinScript )
 		{

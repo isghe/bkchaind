@@ -418,7 +418,7 @@ void computeRIPEMD160(const void *_message,uint32_t length,uint8_t hashcode[20])
 }
 
 
-}; // end of RIPEMD160 hash
+} // end of RIPEMD160 hash
 
 //********** Beginning of source code for SHA256 hash
 
@@ -890,7 +890,7 @@ namespace BLOCKCHAIN_SHA256
 		sha256_finalize(&sc,destHash);
 	}
 
-}; // End of the SHA-2556 namespace
+} // End of the SHA-2556 namespace
 
 
 // Begin of source to perform Base58 encode/decode
@@ -948,7 +948,7 @@ enum BigNumberCompare
 {
 	CB_COMPARE_MORE_THAN = 1, 
 	CB_COMPARE_EQUAL = 0, 
-	CB_COMPARE_LESS_THAN = -1, 
+	CB_COMPARE_LESS_THAN = -1
 };
 
 /**
@@ -1384,7 +1384,7 @@ uint32_t decodeBase58(const char *string,		// The base58 encoded string
 	return ret;
 }
 
-}; // end of namespace
+} // end of namespace
 
 // ************ Beginning of source to compute bitcoin addresses from public keys, etc.
 namespace BLOCKCHAIN_BITCOIN_ADDRESS
@@ -1452,7 +1452,7 @@ bool bitcoinAsciiToAddress(const char *input,uint8_t output[25]) // convert an A
 	return ret;
 }
 
-}; // end of namespace
+} // end of namespace
 
 class BlockChainConfig
 {
@@ -1726,7 +1726,6 @@ public:
 	//Step #9 Read the LockTime; a value currently always hard-coded to zero
 	bool processBlockData(const BlockChainConfig *config, const void *blockData, uint32_t blockLength)
 	{
-		uint8_t hash[32];
 		BLOCKCHAIN_SHA256::computeSHA256(blockData, 80, blockHash);
 		BLOCKCHAIN_SHA256::computeSHA256(blockHash, 32, blockHash);
 
@@ -1819,7 +1818,7 @@ public:
 			if (r == 1)
 				fseek(fph, 0, SEEK_SET); // Return to beginning of file
 
-			for (int i = 0; i < sizeof(configs) / sizeof(configs[0]); ++i)
+			for (size_t i = 0; i < sizeof(configs) / sizeof(configs[0]); ++i)
 			{
 				if (magicID == configs[i].magicID)
 					mConfig = &configs[i];

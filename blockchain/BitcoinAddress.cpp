@@ -394,7 +394,7 @@ void computeRIPEMD160(const void *_message,uint32_t length,uint8_t hashcode[20])
 }
 
 
-};
+}
 
 namespace SHA256
 {
@@ -864,7 +864,7 @@ namespace SHA256
 		sha256_finalize(&sc,destHash);
 	}
 
-}; // End of the SHA-2556 namespace
+} // End of the SHA-2556 namespace
 
 
 namespace BASE58
@@ -921,7 +921,7 @@ enum BigNumberCompare
 {
 	CB_COMPARE_MORE_THAN = 1, 
 	CB_COMPARE_EQUAL = 0, 
-	CB_COMPARE_LESS_THAN = -1, 
+	CB_COMPARE_LESS_THAN = -1
 };
 
 /**
@@ -1360,7 +1360,7 @@ uint32_t decodeBase58(const char *string,		// The base58 encoded string
 	return ret;
 }
 
-}; // end of namespace
+} // end of namespace
 
 bool bitcoinPublicKeyToAddress(uint8_t pubkeyAddress, const uint8_t input[65], // The 65 bytes long ECDSA public key; first byte will always be 0x4 followed by two 32 byte components
 							   uint8_t output[25])		// A bitcoin address (in binary( is always 25 bytes long.

@@ -60,7 +60,7 @@ enum BigNumberCompare
 {
 	CB_COMPARE_MORE_THAN = 1, 
 	CB_COMPARE_EQUAL = 0, 
-	CB_COMPARE_LESS_THAN = -1, 
+	CB_COMPARE_LESS_THAN = -1
 };
 
 /**
